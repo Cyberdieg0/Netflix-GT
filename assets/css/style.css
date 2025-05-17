@@ -1,0 +1,276 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+ 
+/* Estilos del encabezado */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+    padding: 15px 40px;
+}
+
+/* Estilo del logo */
+.logo {
+    width:  80px;
+    height: auto;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.10); /* Aumenta un 5% el tamaño */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Sombra suave */
+    transition: all 0.3s ease-in-out; /* Suaviza el efecto */
+}
+
+/* Estilo del menu */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 350px;
+}
+
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ff3f3f;
+}
+
+/* estilos del video en pantalla completa */
+.pelicula-principal {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 20px 0;
+    margin-bottom: 140px;
+}
+
+/* efecto de transcicion superior */
+.pelicula-principal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 275px;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+/* Degradado en la parte inferior del video */
+.pelicula-principal::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 275px; /* Tamaño del degradado en la parte inferior */
+    background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+/* ajuste del video */
+.pelicula-principal video {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* Estilos para los detalles de Dragon Ball Daima */
+.detalles-pelicula {
+    position: absolute;
+    margin-top: 20px;
+    bottom: -50px; /* Ubicación arriba de los botones */
+    left: 50.5%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+
+/* estilos de botones debajo del video */
+.botones-video {
+    position: absolute;
+    bottom: -145px;
+    left: 53.5%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 120px;
+}
+
+/* Estilos de los botones con íconos */
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0,3s ease;
+    margin-right: 30px;
+    opacity: 0,8;
+}
+
+/* Ajuste del tamaño de los íconos */
+.btn img {
+    width: 26px;
+    height: auto;
+}
+
+/* Hover en los botones */
+.btn:hover {
+    background: none;
+    background-color: none;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Estilos de categorías */
+.categorias {
+    padding: 20px;
+}
+
+.categoria {
+    margin-bottom: 30px;
+}
+
+.categoria h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Estilos de las películas dentro de categorías */
+.peliculas {
+    display: flex;
+    overflow-x: auto;
+    gap: 5px;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+
+.pelicula {
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.pelicula img {
+    width: 120%;
+    height: 90%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.pelicula img:hover {
+    transform: scale(1.05); /* Aumenta un 5% el tamaño */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Sombra suave */
+    transition: all 0.3s ease-in-out; /* Suaviza el efecto */
+}
+
+/* estilos para barra inferior */
+.barra-inferior {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 0;
+}
+
+/*estilos de los iconos */
+.iconos {
+    background: none;
+    border: none;
+    color: #6e6e6e;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+/* ajuste de tamaño de iconos */
+.icono {
+    width: 32px;
+    height: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    display: flex;
+    font-size: 12px;
+
+}
+
+/*tamaño de iconos */
+.icono img {
+    width: 30px;
+    height: auto;
+}
+
+/* Efecto cuando se pasa el mouse */
+.icono:hover {
+    color: white;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, color 0.3s ease;    
+}
+
+.icono:focus {
+    outline: none;
+}
+
+/*asegurar textos visibles*/
+.icono span {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    color: white;
+}
+
+.footer {
+    background-color: red;
+    border: 2px solid yellow;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    margin-top: 10px 0;
+}
