@@ -1,0 +1,334 @@
+/* Estilos generales para la página de detalles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Estilos del botón de flecha */
+.flecha-navegacion {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    margin-bottom: -30px;
+}
+
+.btn-volver img {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.btn-volver:hover img {
+    transform: scale(1.1);
+}
+
+/* Estilos para la sección de detalles */
+.detalle-pelicula {
+    position: relative; /* Fija el video en la pantalla */
+    width: 100vw; /* Ocupar todo el ancho */
+    height: auto; /* Ocupar toda la altura */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 20px 0;
+    margin-bottom: 140px;
+}
+
+/* Estilos del video */
+.detalle-pelicula video {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* Información de la película */
+.info-detalle {
+    margin-right: 1550px;
+    max-width: 600px;
+    text-align: left;
+}
+
+/* Alinear "99% de coincidencia" con la información adicional */
+.info-flex {
+    display: flex;
+    align-items: center; /* Mantener alineado en la misma línea */
+    gap: 15px; /* Espaciado uniforme */
+    margin-left: 150px;
+}
+
+/* Estilos de la información adicional (año, clasificación, duración, calidad) */
+.info {
+    font-size: 30px;
+    color: white;
+    margin-left: 150px;
+    margin-bottom: 60px;
+}
+
+.info-2024 {
+    opacity: 500; /* transparencia */
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+.info-PG {
+    display: inline-block; /* Mantenerlo alineado con los otros elementos */
+    border: 2px solid white; /* Borde blanco */
+    padding: 4px 8px; /* Espaciado interno */
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(124, 121, 121); /* Fondo rojo para mantener la apariencia */
+    border-radius: 4px; /* Suavizar bordes si es necesario */
+}
+
+.info-duracion {
+    opacity: 500; /* transparencia */
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.info-HD {
+    display: inline-block; /* Mantenerlo en línea con otros elementos */
+    border: 2px solid white; /* Borde blanco */
+    padding: 4px 8px; /* Espaciado interno para mejorar apariencia */
+    font-size: 18px; 
+    font-weight: bold;
+    color: white;
+}
+
+
+.info-detalle h2 {
+    font-size: 70px;
+    white-space: nowrap;
+    letter-spacing: -1px;
+    width: fit-content;
+    margin-left: 150px;
+    margin-bottom: 5px;
+}
+
+.info-detalle p {
+    font-size: 35px;
+    opacity: 0.8;
+    color: rgb(1, 255, 1);
+    margin-left: 150px;
+}
+
+/* Estilos de los botones */
+.botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin-left: 130px;
+    position: absolute;
+    left: 45%;
+    transform: translateX(-50%);
+}
+
+.descripcion {
+    font-size: 40px;
+    color: white;
+    opacity: 0.8;
+    line-height: 1.4;
+    text-align: justify;
+    width: 1820px;
+    margin: 50px auto; /* Centrarlo correctamente */
+    padding: 10px; /* Espaciado interno */
+    position: relative; /* Evita que se sobreponga */
+}
+
+.autores {
+    font-size: 40px;
+    color: white;
+    opacity: 0.5;
+    text-align: left;
+    width: 600px;
+    margin-top: 0px; /* Reducir espacio con la descripción */
+    margin-left: -6.7px;
+    padding: 0px;
+    display: flex; /* Mantener alineado dentro del bloque */
+    flex-direction: column; /* Apilar los elementos correctamente */
+    position: static; /* Evitar que se desplacen inesperadamente */
+    line-height: 1;
+}
+
+.autores p {
+    margin: 0; /* Eliminar espacio entre los párrafos */
+    padding: 50; /* Asegurar que no haya separación extra */
+    line-height:1; /* Reducir el espacio vertical */
+}
+
+.btn-play, .btn-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 900px;
+    max-width: 900px;
+    background: white;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: right;
+    transition: transform 0.2s ease-in-out;
+}
+
+.btn-download {
+    background-color: gray;
+}
+
+.btn-play:hover, .btn-download:hover {
+    transform: scale(1.1);
+}
+
+.botones-secundarios {
+    display: flex;
+    justify-content: center; /* Alinear los botones con la descripción */
+    gap: 15px;
+    margin-top: 90px; /* Reducir espacio entre autores y botones */
+}
+
+.botones-secundarios button {
+    font-size: 40px;
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease;
+}
+
+.botones-secundarios button:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el cursor */
+    opacity: 0.7; /* Suavizar la apariencia */
+}
+
+.botones-secundarios button img {
+    width: 60px;
+    height: 60px;
+}
+
+.similares {
+    margin-top: 50px; /* Separación de los botones secundarios */
+    text-align: left;
+    margin-left:59px;
+}
+
+.similares h3 {
+    font-size: 40px;
+    color: white;
+    margin-bottom:20px;
+}
+
+.grid-similares {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste automático de columnas */
+    gap: 10px; /* Separación entre posters */
+    justify-content: center; /* Centrar los elementos */
+    margin-bottom: 150px;
+
+}
+
+.poster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.poster img {
+    width: 260px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.poster img:hover {
+    transform: scale(1.05); /* Efecto de aumento */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+}
+
+/* estilos para barra inferior */
+.barra-inferior {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 0;
+    z-index: 100;
+}
+
+/*estilos de los iconos */
+.iconos {
+    background: none;
+    border: none;
+    color: #6e6e6e;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+/* ajuste de tamaño de iconos */
+.icono {
+    width: 32px;
+    height: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    display: flex;
+    font-size: 12px;
+
+}
+
+/*tamaño de iconos */
+.icono img {
+    width: 30px;
+    height: auto;
+}
+
+/* Efecto cuando se pasa el mouse */
+.icono:hover {
+    color: white;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, color 0.3s ease;    
+}
+
+.icono:focus {
+    outline: none;
+}
+
+/*asegurar textos visibles*/
+.icono span {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    color: white;
+}
